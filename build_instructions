@@ -1,0 +1,7 @@
+docker build -t motioneye .
+
+docker run --rm -it 696033bf9a70 /bin/bash
+
+docker login
+docker tag a231014a929f tw1nh3ad/motioneye:latest
+docker push tw1nh3ad/motioneye:latest

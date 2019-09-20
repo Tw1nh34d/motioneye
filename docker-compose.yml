@@ -1,0 +1,20 @@
+motioneye:
+    image: tw1nh3ad/motioneye:0.41rc1
+    domainname: nixdorf.home
+    hostname: motioneye
+    container_name: motioneye
+    ports:
+      - "9100:8080"
+      - "9101:8081"
+      - "9102:8082"
+      - "9103:8083"
+      - "9104:8084"
+      - "9105:8085"
+      - "9106:8765"
+      - "9107:8088"
+    volumes:
+      - "/opt/motion/config:/etc/motion"
+      - "/opt/motion/storage:/var/lib/motion"
+    environment:
+      - "TZ=Europe/Berlin"
+    restart: always
