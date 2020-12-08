@@ -15,6 +15,7 @@ RUN apt-get update \
 	libjpeg8 \ 
 	libmicrohttpd12 \
 	libmysqlclient20 \
+	libmariadbclient18 \
 	libpq5 \
 	libsqlite3-0 \
 	libswscale4 \
@@ -44,9 +45,14 @@ RUN pip install --upgrade motioneye
 
 WORKDIR /tmp
 
+
+# motion 4.3.2
+RUN wget --no-check-certificate https://github.com/Motion-Project/motion/releases/download/release-4.3.2/bionic_motion_4.3.2-1_amd64.deb
+RUN dpkg -i /tmp/bionic_motion_4.3.2-1_amd64.deb
+
 # motion 4.2.2
-RUN wget --no-check-certificate https://github.com/Motion-Project/motion/releases/download/release-4.2.2/bionic_motion_4.2.2-1_amd64.deb
-RUN dpkg -i /tmp/bionic_motion_4.2.2-1_amd64.deb
+#RUN wget --no-check-certificate https://github.com/Motion-Project/motion/releases/download/release-4.2.2/bionic_motion_4.2.2-1_amd64.deb
+#RUN dpkg -i /tmp/bionic_motion_4.2.2-1_amd64.deb
 
 
 # motion 4.1.1

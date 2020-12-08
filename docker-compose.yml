@@ -1,5 +1,5 @@
 motioneye:
-    image: tw1nh3ad/motioneye:0.42
+    image: tw1nh3ad/motioneye:0.42.1
     domainname: nixdorf.home
     hostname: motioneye
     container_name: motioneye
